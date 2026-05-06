@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Taking:" %} {{ quiz.title }} - QuizCraft{% endblock %}
+
+{% block extra_head %}
+<script src="{% static 'js/timer.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <!-- Timer (Fixed Position) -->
+    {% if quiz.time_limit %}
+    <div class="quiz-timer">
+        <div class="card bg-warning text-dark shadow">
+            <div class="card-body text-center py-2">
+                <small><i class="bi bi-clock"></i> {% trans "Time Remaining" %}</small>
+                <h3 id="timer" class="mb-0 fw-bold">{{ quiz.time_limit }}:00</h3>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <!-- Quiz Header -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="mb-2">{{ quiz.title }}</h2>
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-question-circle"></i> {{ questions|length }} {% trans "Questions" %}
+                        {% if quiz.time_limit %}
+                        | <i class="bi bi-clock"></i> {{ quiz.time_limit }} {% trans "minutes" %}
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quiz Form -->
+            <form method="post" action="{% url 'quiz:submit_quiz' attempt.id %}" id="quizForm">
+                {% csrf_token %}
+
+                {% for question in questions %}
+                <div class="card question-card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <span class="badge bg-primary me-2">Q{{ forloop.counter }}</span>
+                            {{ question.question_text }}
+                            {% if question.points > 1 %}
+                            <span class="badge bg-secondary">{{ question.points }} {% trans "pts" %}</span>
+                            {% endif %}
+                        </h5>
+
+                        {% if question.question_image %}
+                        <div class="my-3">
+                            <img src="{{ question.question_image.url }}" alt="{% trans "Question image" %}" class="img-fluid rounded" style="max-height: 300px;">
+                        </div>
+                        {% endif %}
+
+                        {% if question.question_type == 'MULTIPLE_CHOICE' %}
+                            {% for answer in question.answers.all %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio"
+                                       name="question_{{ question.id }}"
+                                       id="answer_{{ answer.id }}"
+                                       value="{{ answer.id }}" required>
+                                <label class="form-check-label" for="answer_{{ answer.id }}">
+                                    {{ answer.answer_text }}
+                                </label>
+                            </div>
+                            {% endfor %}
+
+                        {% elif question.question_type == 'TRUE_FALSE' %}
+                            {% for answer in question.answers.all %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio"
+                                       name="question_{{ question.id }}"
+                                       id="answer_{{ answer.id }}"
+                                       value="{{ answer.id }}" required>
+                                <label class="form-check-label" for="answer_{{ answer.id }}">
+                                    {{ answer.answer_text }}
+                                </label>
+                            </div>
+                            {% endfor %}
+
+                        {% elif question.question_type == 'MULTIPLE_SELECT' %}
+                            <div class="alert alert-info py-2">
+                                <i class="bi bi-info-circle"></i> {% trans "Select all that apply" %}
+                            </div>
+                            {% for answer in question.answers.all %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox"
+                                       name="question_{{ question.id }}"
+                                       id="answer_{{ answer.id }}"
+                                       value="{{ answer.id }}">
+                                <label class="form-check-label" for="answer_{{ answer.id }}">
+                                    {{ answer.answer_text }}
+                                </label>
+                            </div>
+                            {% endfor %}
+
+                        {% elif question.question_type == 'SHORT_ANSWER' %}
+                            <input type="text"
+                                   name="question_{{ question.id }}"
+                                   class="form-control"
+                                   placeholder="{% trans "Enter your answer" %}"
+                                   required>
+
+                        {% elif question.question_type == 'FILL_BLANK' %}
+                            <input type="text"
+                                   name="question_{{ question.id }}"
+                                   class="form-control"
+                                   placeholder="{% trans "Fill in the blank" %}"
+                                   required>
+
+                        {% elif question.question_type == 'ESSAY' %}
+                            <textarea name="question_{{ question.id }}"
+                                      class="form-control"
+                                      rows="6"
+                                      placeholder="{% trans "Write your essay answer here..." %}"
+                                      required></textarea>
+                            <small class="text-muted">{% trans "This will be manually graded." %}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Submit Button -->
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="bi bi-check-circle"></i> {% trans "Submit Quiz" %}
+                        </button>
+                        <p class="text-muted mt-2 mb-0">
+                            <small>{% trans "Make sure you've answered all questions before submitting." %}</small>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Timer Script -->
+{% if quiz.time_limit %}
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        const display = document.getElementById('timer');
+        const form = document.getElementById('quizForm');
+        const timeInSeconds = {{ quiz.time_limit }} * 60;
+        startTimer(timeInSeconds, display, form);
+    });
+
+    // Warn before leaving page
+    window.addEventListener('beforeunload', function(e) {
+        e.preventDefault();
+        e.returnValue = '';
+    });
+
+    // Remove warning when submitting
+    document.getElementById('quizForm').addEventListener('submit', function() {
+        window.removeEventListener('beforeunload', function() {});
+    });
+</script>
+{% endif %}
+{% endblock %}

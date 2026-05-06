@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{{ quiz.title }} - QuizCraft{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Quiz Header -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h1 class="card-title mb-3">{{ quiz.title }}</h1>
+
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-{{ quiz.difficulty|lower }}">{{ quiz.get_difficulty_display }}</span>
+                        {% if quiz.category %}
+                        <span class="badge bg-secondary">{{ quiz.category }}</span>
+                        {% endif %}
+                        {% if quiz.time_limit %}
+                        <span class="badge bg-info">
+                            <i class="bi bi-clock"></i> {{ quiz.time_limit }} {% trans "minutes" %}
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <p class="card-text">{{ quiz.description }}</p>
+
+                    <!-- Quiz Stats -->
+                    <div class="row text-center mt-4">
+                        <div class="col-4">
+                            <h4>{{ quiz.total_questions }}</h4>
+                            <small class="text-muted">{% trans "Questions" %}</small>
+                        </div>
+                        <div class="col-4">
+                            <h4>{{ quiz.total_attempts }}</h4>
+                            <small class="text-muted">{% trans "Attempts" %}</small>
+                        </div>
+                        <div class="col-4">
+                            <h4>{{ quiz.avg_score|floatformat:0 }}%</h4>
+                            <small class="text-muted">{% trans "Avg Score" %}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Info -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">{% trans "Quiz Information" %}</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <i class="bi bi-person text-primary"></i>
+                            {% trans "Created by:" %} <strong>{{ quiz.creator.username }}</strong>
+                        </li>
+                        {% if quiz.pass_score %}
+                        <li class="mb-2">
+                            <i class="bi bi-trophy text-warning"></i>
+                            {% trans "Passing Score:" %} <strong>{{ quiz.pass_score }}%</strong>
+                        </li>
+                        {% endif %}
+                        {% if quiz.max_attempts %}
+                        <li class="mb-2">
+                            <i class="bi bi-arrow-repeat text-info"></i>
+                            {% trans "Maximum Attempts:" %} <strong>{{ quiz.max_attempts }}</strong>
+                        </li>
+                        {% endif %}
+                        <li class="mb-2">
+                            <i class="bi bi-{{ quiz.shuffle_questions|yesno:'shuffle,list-check' }} text-secondary"></i>
+                            {% trans "Questions:" %} <strong>{% if quiz.shuffle_questions %}{% trans "Shuffled" %}{% else %}{% trans "Fixed Order" %}{% endif %}</strong>
+                        </li>
+                        {% if quiz.show_correct_answers %}
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle text-success"></i>
+                            {% trans "Correct answers will be shown after submission" %}
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Start Quiz Button -->
+            <div class="text-center">
+                {% if quiz.requires_authentication and not user.is_authenticated %}
+                    <div class="alert alert-warning">
+                        <i class="bi bi-lock"></i>
+                        {% trans "You must" %} <a href="{% url 'accounts:login' %}?next={{ request.path }}">{% trans "login" %}</a> {% trans "to take this quiz." %}
+                    </div>
+                {% else %}
+                    <a href="{% url 'quiz:take_quiz' quiz.id %}" class="btn btn-primary btn-lg">
+                        <i class="bi bi-play-circle"></i> {% trans "Start Quiz" %}
+                    </a>
+                    <a href="{% url 'quiz:quiz_list' %}" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left"></i> {% trans "Back to Quizzes" %}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

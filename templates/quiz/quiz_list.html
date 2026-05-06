@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Browse Quizzes" %} - QuizCraft{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="bi bi-list-ul"></i> {% trans "Browse Quizzes" %}</h2>
+
+    <!-- Search and Filters -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" name="search" class="form-control" placeholder="{% trans "Search quizzes..." %}" value="{{ search_query }}">
+                </div>
+                <div class="col-md-3">
+                    <select name="difficulty" class="form-select">
+                        <option value="">{% trans "All Difficulties" %}</option>
+                        <option value="EASY" {% if difficulty == 'EASY' %}selected{% endif %}>{% trans "Easy" %}</option>
+                        <option value="MEDIUM" {% if difficulty == 'MEDIUM' %}selected{% endif %}>{% trans "Medium" %}</option>
+                        <option value="HARD" {% if difficulty == 'HARD' %}selected{% endif %}>{% trans "Hard" %}</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select name="category" class="form-select">
+                        <option value="">{% trans "All Categories" %}</option>
+                        {% for cat in categories %}
+                        <option value="{{ cat }}" {% if category == cat %}selected{% endif %}>{{ cat }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-search"></i> {% trans "Search" %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quiz Grid -->
+    <div class="row g-4">
+        {% for quiz in page_obj %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title">{{ quiz.title }}</h5>
+                        <span class="badge bg-{% if quiz.difficulty == 'EASY' %}success{% elif quiz.difficulty == 'MEDIUM' %}warning{% else %}danger{% endif %}">
+                            {{ quiz.get_difficulty_display }}
+                        </span>
+                    </div>
+
+                    <p class="card-text text-muted small">{{ quiz.description|truncatewords:20 }}</p>
+
+                    <div class="d-flex justify-content-between text-muted small mt-3">
+                        <span><i class="bi bi-question-circle"></i> {{ quiz.total_questions }} {% trans "Qs" %}</span>
+                        <span><i class="bi bi-clock"></i>
+                            {% if quiz.time_limit %}{% widthratio quiz.time_limit 60 1 %} min{% else %}{% trans "Unlimited" %}{% endif %}
+                        </span>
+                        <span><i class="bi bi-people"></i> {{ quiz.total_attempts }}</span>
+                    </div>
+
+                    {% if quiz.category %}
+                    <div class="mt-2">
+                        <span class="badge bg-secondary">{{ quiz.category }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'quiz:quiz_detail' quiz.id %}" class="btn btn-primary btn-sm w-100">
+                        <i class="bi bi-arrow-right-circle"></i> {% trans "View Details" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i> {% trans "No quizzes found. Try adjusting your search criteria." %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if page_obj.has_other_pages %}
+    <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "Previous" %}</a>
+            </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+            <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            </li>
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "Next" %}</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{% endblock %}

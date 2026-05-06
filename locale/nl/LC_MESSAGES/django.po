@@ -1,0 +1,993 @@
+# QuizCraft Translation File
+# Copyright (C) 2025 QuizCraft
+# Language: nl
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: QuizCraft 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: QuizCraft Team\n"
+"Language-Team: nl\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Create & Take Quizzes"
+msgstr "Maak & Doe Quizzen"
+
+msgid "Browse Quizzes"
+msgstr "Quizzen Bekijken"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "My Quizzes"
+msgstr "Mijn Quizzen"
+
+msgid "Create Quiz"
+msgstr "Quiz Maken"
+
+msgid "Toggle dark mode"
+msgstr "Donkere modus schakelen"
+
+msgid "Free"
+msgstr "Gratis"
+
+msgid "Profile"
+msgstr "Profiel"
+
+msgid "Subscription"
+msgstr "Abonnement"
+
+msgid "My Attempts"
+msgstr "Mijn Pogingen"
+
+msgid "Admin Panel"
+msgstr "Beheerpaneel"
+
+msgid "Logout"
+msgstr "Uitloggen"
+
+msgid "Login"
+msgstr "Inloggen"
+
+msgid "Sign Up"
+msgstr "Registreren"
+
+msgid "Create & Take Quizzes Online"
+msgstr "Maak & Doe Online Quizzen"
+
+msgid "Built with Django & Bootstrap."
+msgstr "Gebouwd met Django & Bootstrap."
+
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgid "Don't have an account?"
+msgstr "Heeft u geen account?"
+
+msgid "Create Account"
+msgstr "Account Aanmaken"
+
+msgid "First Name"
+msgstr "Voornaam"
+
+msgid "Last Name"
+msgstr "Achternaam"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Minimum 8 characters"
+msgstr "Minimaal 8 tekens"
+
+msgid "Confirm Password"
+msgstr "Wachtwoord Bevestigen"
+
+msgid "Already have an account?"
+msgstr "Heeft u al een account?"
+
+msgid "Create Amazing Quizzes in Minutes"
+msgstr "Maak Geweldige Quizzen in Minuten"
+
+msgid "QuizCraft makes it easy to create, share, and take quizzes online. Perfect for teachers, trainers, and content creators."
+msgstr "QuizCraft maakt het gemakkelijk om online quizzen te maken, delen en af te leggen. Perfect voor docenten, trainers en contentmakers."
+
+msgid "Get Started Free"
+msgstr "Gratis Beginnen"
+
+msgid "Quizzes Available"
+msgstr "Beschikbare Quizzen"
+
+msgid "Active Users"
+msgstr "Actieve Gebruikers"
+
+msgid "Quizzes Completed"
+msgstr "Voltooide Quizzen"
+
+msgid "Featured Quizzes"
+msgstr "Uitgelichte Quizzen"
+
+msgid "questions"
+msgstr "vragen"
+
+msgid "Unlimited"
+msgstr "Onbeperkt"
+
+msgid "Take Quiz"
+msgstr "Quiz Doen"
+
+msgid "Recent Quizzes"
+msgstr "Recente Quizzen"
+
+msgid "View Details"
+msgstr "Details Bekijken"
+
+msgid "View All Quizzes"
+msgstr "Alle Quizzen Bekijken"
+
+msgid "Why Choose QuizCraft?"
+msgstr "Waarom QuizCraft?"
+
+msgid "Fast & Easy"
+msgstr "Snel & Makkelijk"
+
+msgid "Create quizzes in minutes with our intuitive interface"
+msgstr "Maak quizzen in minuten met onze intuïtieve interface"
+
+msgid "Auto-Grading"
+msgstr "Automatisch Beoordelen"
+
+msgid "Automatic grading saves you time"
+msgstr "Automatisch beoordelen bespaart u tijd"
+
+msgid "Analytics"
+msgstr "Analyse"
+
+msgid "Track performance with detailed statistics"
+msgstr "Volg prestaties met gedetailleerde statistieken"
+
+msgid "Mobile Ready"
+msgstr "Mobiel Klaar"
+
+msgid "Works perfectly on all devices"
+msgstr "Werkt perfect op alle apparaten"
+
+msgid "Ready to Get Started?"
+msgstr "Klaar om te Beginnen?"
+
+msgid "Join thousands of educators and learners using QuizCraft"
+msgstr "Sluit u aan bij duizenden docenten en studenten die QuizCraft gebruiken"
+
+msgid "Create Free Account"
+msgstr "Gratis Account Aanmaken"
+
+msgid "Search quizzes..."
+msgstr "Zoek quizzen..."
+
+msgid "All Difficulties"
+msgstr "Alle Moeilijkheden"
+
+msgid "All Categories"
+msgstr "Alle Categorieën"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "Qs"
+msgstr "Vr"
+
+msgid "No quizzes found. Try adjusting your search criteria."
+msgstr "Geen quizzen gevonden. Pas uw zoekcriteria aan."
+
+msgid "Previous"
+msgstr "Vorige"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Page Not Found"
+msgstr "Pagina Niet Gevonden"
+
+msgid "404 - Page Not Found"
+msgstr "404 - Pagina Niet Gevonden"
+
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "De pagina die u zoekt bestaat niet of is verplaatst."
+
+msgid "Go Home"
+msgstr "Naar Home"
+
+msgid "Access Denied"
+msgstr "Toegang Geweigerd"
+
+msgid "403 - Access Denied"
+msgstr "403 - Toegang Geweigerd"
+
+msgid "You don't have permission to access this page."
+msgstr "U heeft geen toestemming om deze pagina te bekijken."
+
+msgid "Easy"
+msgstr "Makkelijk"
+
+msgid "Medium"
+msgstr "Gemiddeld"
+
+msgid "Hard"
+msgstr "Moeilijk"
+
+msgid "Multiple Choice"
+msgstr "Meerkeuze"
+
+msgid "True/False"
+msgstr "Waar/Onwaar"
+
+msgid "Short Answer"
+msgstr "Kort Antwoord"
+
+msgid "Essay"
+msgstr "Essay"
+
+msgid "Multiple Select"
+msgstr "Meerdere Selectie"
+
+msgid "Fill in the Blank"
+msgstr "Invullen"
+
+msgid "In Progress"
+msgstr "Bezig"
+
+msgid "Completed"
+msgstr "Voltooid"
+
+msgid "Abandoned"
+msgstr "Verlaten"
+
+msgid "Timed Out"
+msgstr "Tijd Verlopen"
+
+msgid "quiz"
+msgstr "quiz"
+
+msgid "quizzes"
+msgstr "quizzen"
+
+msgid "question"
+msgstr "vraag"
+
+msgid "answer"
+msgstr "antwoord"
+
+msgid "answers"
+msgstr "antwoorden"
+
+msgid "quiz attempt"
+msgstr "quizpoging"
+
+msgid "quiz attempts"
+msgstr "quizpogingen"
+
+msgid "response"
+msgstr "reactie"
+
+msgid "responses"
+msgstr "reacties"
+
+msgid "quiz template"
+msgstr "quizsjabloon"
+
+msgid "quiz templates"
+msgstr "quizsjablonen"
+
+msgid "Welcome back,"
+msgstr "Welkom terug,"
+
+msgid "free quizzes remaining"
+msgstr "gratis quizzen resterend"
+
+msgid "Quizzes Created"
+msgstr "Quizzen Gemaakt"
+
+msgid "Quizzes Taken"
+msgstr "Quizzen Gedaan"
+
+msgid "Average Score"
+msgstr "Gemiddelde Score"
+
+msgid "Responses Received"
+msgstr "Reacties Ontvangen"
+
+msgid "Quick Actions"
+msgstr "Snelle Acties"
+
+msgid "Create Quiz (Limit Reached)"
+msgstr "Quiz Maken (Limiet Bereikt)"
+
+msgid "Upgrade to Premium!"
+msgstr "Upgrade naar Premium!"
+
+msgid "Create unlimited quizzes and unlock advanced features."
+msgstr "Maak onbeperkt quizzen en ontgrendel geavanceerde functies."
+
+msgid "View Plans"
+msgstr "Plannen Bekijken"
+
+msgid "Your Quizzes"
+msgstr "Uw Quizzen"
+
+msgid "View All"
+msgstr "Alles Bekijken"
+
+msgid "attempts"
+msgstr "pogingen"
+
+msgid "Published"
+msgstr "Gepubliceerd"
+
+msgid "Draft"
+msgstr "Concept"
+
+msgid "You haven't created any quizzes yet."
+msgstr "U heeft nog geen quizzen gemaakt."
+
+msgid "Create Your First Quiz"
+msgstr "Maak Uw Eerste Quiz"
+
+msgid "Recent Attempts"
+msgstr "Recente Pogingen"
+
+msgid "Passed"
+msgstr "Geslaagd"
+
+msgid "Failed"
+msgstr "Gezakt"
+
+msgid "You haven't taken any quizzes yet."
+msgstr "U heeft nog geen quizzen gedaan."
+
+msgid "Your Performance"
+msgstr "Uw Prestaties"
+
+msgid "Pass Rate"
+msgstr "Slagingspercentage"
+
+msgid "minutes"
+msgstr "minuten"
+
+msgid "Questions"
+msgstr "Vragen"
+
+msgid "Attempts"
+msgstr "Pogingen"
+
+msgid "Avg Score"
+msgstr "Gem. Score"
+
+msgid "Quiz Information"
+msgstr "Quiz Informatie"
+
+msgid "Created by:"
+msgstr "Gemaakt door:"
+
+msgid "Passing Score:"
+msgstr "Slaagscore:"
+
+msgid "Maximum Attempts:"
+msgstr "Maximale Pogingen:"
+
+msgid "Questions:"
+msgstr "Vragen:"
+
+msgid "Shuffled"
+msgstr "Willekeurig"
+
+msgid "Fixed Order"
+msgstr "Vaste Volgorde"
+
+msgid "Correct answers will be shown after submission"
+msgstr "Correcte antwoorden worden na het indienen getoond"
+
+msgid "You must"
+msgstr "U moet"
+
+msgid "login"
+msgstr "inloggen"
+
+msgid "to take this quiz."
+msgstr "om deze quiz te doen."
+
+msgid "Start Quiz"
+msgstr "Quiz Starten"
+
+msgid "Back to Quizzes"
+msgstr "Terug naar Quizzen"
+
+msgid "Taking:"
+msgstr "Bezig met:"
+
+msgid "Time Remaining"
+msgstr "Resterende Tijd"
+
+msgid "pts"
+msgstr "pt"
+
+msgid "Question image"
+msgstr "Vraag afbeelding"
+
+msgid "Select all that apply"
+msgstr "Selecteer alles wat van toepassing is"
+
+msgid "Enter your answer"
+msgstr "Voer uw antwoord in"
+
+msgid "Fill in the blank"
+msgstr "Vul het lege veld in"
+
+msgid "Write your essay answer here..."
+msgstr "Schrijf hier uw essay antwoord..."
+
+msgid "This will be manually graded."
+msgstr "Dit wordt handmatig beoordeeld."
+
+msgid "Submit Quiz"
+msgstr "Quiz Indienen"
+
+msgid "Make sure you've answered all questions before submitting."
+msgstr "Zorg ervoor dat u alle vragen heeft beantwoord voordat u indient."
+
+msgid "You have created"
+msgstr "U heeft gemaakt"
+
+msgid "remaining on free plan"
+msgstr "resterend op gratis plan"
+
+msgid "Upgrade to Create More"
+msgstr "Upgrade om Meer te Maken"
+
+msgid "Heads up!"
+msgstr "Let op!"
+
+msgid "You're running low on free quizzes."
+msgstr "U heeft bijna geen gratis quizzen meer."
+
+msgid "Upgrade now"
+msgstr "Nu upgraden"
+
+msgid "for unlimited quizzes."
+msgstr "voor onbeperkte quizzen."
+
+msgid "All Status"
+msgstr "Alle Status"
+
+msgid "Filter"
+msgstr "Filteren"
+
+msgid "Public"
+msgstr "Openbaar"
+
+msgid "Private"
+msgstr "Privé"
+
+msgid "View"
+msgstr "Bekijken"
+
+msgid "Edit"
+msgstr "Bewerken"
+
+msgid "Created"
+msgstr "Gemaakt"
+
+msgid "No Quizzes Yet"
+msgstr "Nog Geen Quizzen"
+
+msgid "You haven't created any quizzes. Start creating your first quiz now!"
+msgstr "U heeft nog geen quizzen gemaakt. Begin nu met het maken van uw eerste quiz!"
+
+msgid "You've reached your free quiz limit."
+msgstr "U heeft uw gratis quiz limiet bereikt."
+
+msgid "Upgrade to Premium"
+msgstr "Upgrade naar Premium"
+
+msgid "Quiz Results"
+msgstr "Quiz Resultaten"
+
+msgid "Congratulations!"
+msgstr "Gefeliciteerd!"
+
+msgid "You passed the quiz!"
+msgstr "U bent geslaagd voor de quiz!"
+
+msgid "Not Quite There"
+msgstr "Nog Niet Helemaal"
+
+msgid "Keep practicing and try again!"
+msgstr "Blijf oefenen en probeer het opnieuw!"
+
+msgid "Your Score"
+msgstr "Uw Score"
+
+msgid "Correct"
+msgstr "Correct"
+
+msgid "Total"
+msgstr "Totaal"
+
+msgid "Time Taken"
+msgstr "Tijd Nodig"
+
+msgid "Review Your Answers"
+msgstr "Bekijk Uw Antwoorden"
+
+msgid "Incorrect"
+msgstr "Onjuist"
+
+msgid "Pending Review"
+msgstr "In Behandeling"
+
+msgid "Your Answer:"
+msgstr "Uw Antwoord:"
+
+msgid "No answer provided"
+msgstr "Geen antwoord gegeven"
+
+msgid "Correct Answer:"
+msgstr "Correct Antwoord:"
+
+msgid "Explanation:"
+msgstr "Uitleg:"
+
+msgid "Try Again"
+msgstr "Opnieuw Proberen"
+
+msgid "Quiz Info"
+msgstr "Quiz Info"
+
+msgid "Share Your Results"
+msgstr "Deel Uw Resultaten"
+
+msgid "Show off your achievement!"
+msgstr "Laat uw prestatie zien!"
+
+msgid "Copy Link"
+msgstr "Link Kopiëren"
+
+msgid "Link copied to clipboard!"
+msgstr "Link gekopieerd naar klembord!"
+
+msgid "Failed to copy link"
+msgstr "Kopiëren mislukt"
+
+msgid "My Quiz Attempts"
+msgstr "Mijn Quizpogingen"
+
+msgid "You have completed"
+msgstr "U heeft voltooid"
+
+msgid "Total Attempts"
+msgstr "Totaal Pogingen"
+
+msgid "Search quiz titles..."
+msgstr "Zoek quiztitels..."
+
+msgid "All Results"
+msgstr "Alle Resultaten"
+
+msgid "Passed Only"
+msgstr "Alleen Geslaagd"
+
+msgid "Failed Only"
+msgstr "Alleen Gezakt"
+
+msgid "Newest First"
+msgstr "Nieuwste Eerst"
+
+msgid "Oldest First"
+msgstr "Oudste Eerst"
+
+msgid "Highest Score"
+msgstr "Hoogste Score"
+
+msgid "Lowest Score"
+msgstr "Laagste Score"
+
+msgid "Score"
+msgstr "Score"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "View Results"
+msgstr "Resultaten Bekijken"
+
+msgid "Retry"
+msgstr "Opnieuw"
+
+msgid "Pass score:"
+msgstr "Slaagscore:"
+
+msgid "No Quiz Attempts Yet"
+msgstr "Nog Geen Quizpogingen"
+
+msgid "You haven't taken any quizzes. Browse our collection and start learning!"
+msgstr "U heeft nog geen quizzen gedaan. Bekijk onze collectie en begin met leren!"
+
+msgid "Delete Quiz"
+msgstr "Quiz Verwijderen"
+
+msgid "Confirm Delete"
+msgstr "Verwijdering Bevestigen"
+
+msgid "This action cannot be undone!"
+msgstr "Deze actie kan niet ongedaan worden gemaakt!"
+
+msgid "You are about to permanently delete this quiz and all associated data."
+msgstr "U staat op het punt deze quiz en alle bijbehorende gegevens permanent te verwijderen."
+
+msgid "Quiz Details:"
+msgstr "Quiz Details:"
+
+msgid "Title:"
+msgstr "Titel:"
+
+msgid "Total Attempts:"
+msgstr "Totaal Pogingen:"
+
+msgid "Responses:"
+msgstr "Reacties:"
+
+msgid "Created:"
+msgstr "Gemaakt:"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "What will be deleted:"
+msgstr "Wat wordt verwijderd:"
+
+msgid "The quiz:"
+msgstr "De quiz:"
+
+msgid "All questions and answers"
+msgstr "Alle vragen en antwoorden"
+
+msgid "All user attempts and results"
+msgstr "Alle gebruikerspogingen en resultaten"
+
+msgid "All individual responses"
+msgstr "Alle individuele reacties"
+
+msgid "All statistics and analytics"
+msgstr "Alle statistieken en analyses"
+
+msgid "Type the quiz title to confirm:"
+msgstr "Typ de quiztitel om te bevestigen:"
+
+msgid "Copy and paste the title exactly as shown above"
+msgstr "Kopieer en plak de titel precies zoals hierboven weergegeven"
+
+msgid "Yes, Delete This Quiz Permanently"
+msgstr "Ja, Verwijder Deze Quiz Permanent"
+
+msgid "Cancel - Keep This Quiz"
+msgstr "Annuleren - Quiz Behouden"
+
+msgid "Don't want to delete? Consider these alternatives:"
+msgstr "Wilt u niet verwijderen? Overweeg deze alternatieven:"
+
+msgid "Edit Quiz"
+msgstr "Quiz Bewerken"
+
+msgid "Use Edit to unpublish"
+msgstr "Gebruik Bewerken om te depubliceren"
+
+msgid "Unpublish"
+msgstr "Depubliceren"
+
+msgid "Unpublishing keeps your quiz but hides it from public view"
+msgstr "Depubliceren behoudt uw quiz maar verbergt deze voor openbaar zicht"
+
+msgid "Are you absolutely sure? This CANNOT be undone!"
+msgstr "Weet u het absoluut zeker? Dit KAN NIET ongedaan worden gemaakt!"
+
+msgid "Create New Quiz"
+msgstr "Nieuwe Quiz Maken"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Quiz Details"
+msgstr "Quiz Details"
+
+msgid "Add Questions"
+msgstr "Vragen Toevoegen"
+
+msgid "Publish"
+msgstr "Publiceren"
+
+msgid "After saving, you can add or edit questions."
+msgstr "Na het opslaan kunt u vragen toevoegen of bewerken."
+
+msgid "Save this form to add questions."
+msgstr "Sla dit formulier op om vragen toe te voegen."
+
+msgid "Basic Information"
+msgstr "Basisinformatie"
+
+msgid "Quiz Title"
+msgstr "Quiztitel"
+
+msgid "Description"
+msgstr "Beschrijving"
+
+msgid "Explain what this quiz is about"
+msgstr "Leg uit waar deze quiz over gaat"
+
+msgid "Difficulty"
+msgstr "Moeilijkheid"
+
+msgid "Category"
+msgstr "Categorie"
+
+msgid "e.g., Math, Science, History"
+msgstr "bijv. Wiskunde, Wetenschap, Geschiedenis"
+
+msgid "Tags"
+msgstr "Labels"
+
+msgid "Comma-separated"
+msgstr "Komma-gescheiden"
+
+msgid "Quiz Settings"
+msgstr "Quiz Instellingen"
+
+msgid "Time Limit (minutes)"
+msgstr "Tijdslimiet (minuten)"
+
+msgid "0 = No time limit"
+msgstr "0 = Geen tijdslimiet"
+
+msgid "Pass Score (%)"
+msgstr "Slaagscore (%)"
+
+msgid "Minimum to pass"
+msgstr "Minimum om te slagen"
+
+msgid "Max Attempts"
+msgstr "Max Pogingen"
+
+msgid "0 = Unlimited"
+msgstr "0 = Onbeperkt"
+
+msgid "Privacy & Publishing"
+msgstr "Privacy & Publicatie"
+
+msgid "Make quiz available to users"
+msgstr "Quiz beschikbaar maken voor gebruikers"
+
+msgid "Show in quiz list"
+msgstr "Tonen in quizlijst"
+
+msgid "Require Login"
+msgstr "Inloggen Vereist"
+
+msgid "Only logged-in users can take"
+msgstr "Alleen ingelogde gebruikers kunnen deelnemen"
+
+msgid "Display Options"
+msgstr "Weergave-opties"
+
+msgid "Shuffle Questions"
+msgstr "Vragen Shuffelen"
+
+msgid "Randomize question order"
+msgstr "Willekeurige vragenvolgorde"
+
+msgid "Shuffle Answers"
+msgstr "Antwoorden Shuffelen"
+
+msgid "Randomize answer choices"
+msgstr "Willekeurige antwoordkeuzes"
+
+msgid "Show Correct Answers"
+msgstr "Correcte Antwoorden Tonen"
+
+msgid "After submission"
+msgstr "Na het indienen"
+
+msgid "Allow Review"
+msgstr "Review Toestaan"
+
+msgid "Users can review answers"
+msgstr "Gebruikers kunnen antwoorden bekijken"
+
+msgid "Instant Results"
+msgstr "Directe Resultaten"
+
+msgid "Show score right away"
+msgstr "Score direct tonen"
+
+msgid "Update Quiz"
+msgstr "Quiz Bijwerken"
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "After saving, you can:"
+msgstr "Na het opslaan kunt u:"
+
+msgid "Preview Quiz"
+msgstr "Quiz Voorbeeld"
+
+msgid "Add Question"
+msgstr "Vraag Toevoegen"
+
+msgid "points"
+msgstr "punten"
+
+msgid "No questions added yet."
+msgstr "Nog geen vragen toegevoegd."
+
+msgid "Add Your First Question"
+msgstr "Voeg Uw Eerste Vraag Toe"
+
+msgid "Question creation interface will be implemented here. For now, use the Django admin panel to add questions."
+msgstr "De interface voor het maken van vragen wordt hier geïmplementeerd. Gebruik voorlopig het Django-beheerpaneel."
+
+msgid "Add via Admin Panel"
+msgstr "Toevoegen via Beheerpaneel"
+
+msgid "My Profile"
+msgstr "Mijn Profiel"
+
+msgid "Bio"
+msgstr "Biografie"
+
+msgid "Organization"
+msgstr "Organisatie"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Avatar"
+msgstr "Avatar"
+
+msgid "Save Changes"
+msgstr "Wijzigingen Opslaan"
+
+msgid "Current Plan:"
+msgstr "Huidig Plan:"
+
+msgid "Quiz Limit:"
+msgstr "Quiz Limiet:"
+
+msgid "Active"
+msgstr "Actief"
+
+msgid "Free Tier"
+msgstr "Gratis Plan"
+
+msgid "Total Quizzes Created:"
+msgstr "Totaal Quizzen Gemaakt:"
+
+msgid "Total Responses:"
+msgstr "Totaal Reacties:"
+
+msgid "Available Plans"
+msgstr "Beschikbare Plannen"
+
+msgid "month"
+msgstr "maand"
+
+msgid "5 quizzes"
+msgstr "5 quizzen"
+
+msgid "50 responses/month"
+msgstr "50 reacties/maand"
+
+msgid "Basic question types"
+msgstr "Basis vraagtypes"
+
+msgid "Current Plan"
+msgstr "Huidig Plan"
+
+msgid "Downgrade"
+msgstr "Downgraden"
+
+msgid "Teacher"
+msgstr "Docent"
+
+msgid "Most Popular"
+msgstr "Meest Populair"
+
+msgid "Unlimited quizzes"
+msgstr "Onbeperkte quizzen"
+
+msgid "Unlimited responses"
+msgstr "Onbeperkte reacties"
+
+msgid "All question types"
+msgstr "Alle vraagtypes"
+
+msgid "Basic analytics"
+msgstr "Basis analyses"
+
+msgid "Upgrade"
+msgstr "Upgraden"
+
+msgid "Professional"
+msgstr "Professioneel"
+
+msgid "Everything in Teacher"
+msgstr "Alles in Docent"
+
+msgid "3 team members"
+msgstr "3 teamleden"
+
+msgid "Advanced analytics"
+msgstr "Geavanceerde analyses"
+
+msgid "Custom branding"
+msgstr "Eigen huisstijl"
+
+msgid "School"
+msgstr "School"
+
+msgid "Everything in Pro"
+msgstr "Alles in Pro"
+
+msgid "10+ team members"
+msgstr "10+ teamleden"
+
+msgid "SSO integration"
+msgstr "SSO-integratie"
+
+msgid "Priority support"
+msgstr "Prioritaire ondersteuning"
+
+msgid "Contact Sales"
+msgstr "Neem Contact Op"
+
+msgid "Cancel Subscription"
+msgstr "Abonnement Opzeggen"
+
+msgid "Are you sure you want to cancel your subscription?"
+msgstr "Weet u zeker dat u uw abonnement wilt opzeggen?"
+
+msgid "Reset Password"
+msgstr "Wachtwoord Resetten"
+
+msgid "Enter your email address and we'll send you a link to reset your password."
+msgstr "Voer uw e-mailadres in en we sturen u een link om uw wachtwoord te resetten."
+
+msgid "Send Reset Link"
+msgstr "Resetlink Versturen"
+
+msgid "Back to Login"
+msgstr "Terug naar Inloggen"
+
+msgid "Set New Password"
+msgstr "Nieuw Wachtwoord Instellen"
+
+msgid "New Password"
+msgstr "Nieuw Wachtwoord"
+
+msgid "Invalid Link"
+msgstr "Ongeldige Link"
+
+msgid "This password reset link is invalid or has expired."
+msgstr "Deze wachtwoord-resetlink is ongeldig of verlopen."
+
+msgid "Request New Link"
+msgstr "Nieuwe Link Aanvragen"
+
+msgid "Forgot your password?"
+msgstr "Wachtwoord vergeten?"
+

@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "My Attempts" %} - QuizCraft{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1><i class="bi bi-clock-history"></i> {% trans "My Quiz Attempts" %}</h1>
+            <p class="text-muted mb-0">
+                {% trans "You have completed" %} {{ attempts.paginator.count }} {% trans "quizzes" %}
+            </p>
+        </div>
+        <a href="{% url 'quiz:quiz_list' %}" class="btn btn-primary">
+            <i class="bi bi-search"></i> {% trans "Browse Quizzes" %}
+        </a>
+    </div>
+
+    <!-- Stats Summary -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card bg-primary text-white shadow-sm">
+                <div class="card-body text-center">
+                    <h3>{{ total_attempts }}</h3>
+                    <small>{% trans "Total Attempts" %}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card bg-success text-white shadow-sm">
+                <div class="card-body text-center">
+                    <h3>{{ passed_attempts }}</h3>
+                    <small>{% trans "Passed" %}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card bg-warning text-dark shadow-sm">
+                <div class="card-body text-center">
+                    <h3>{{ avg_score|floatformat:0 }}%</h3>
+                    <small>{% trans "Average Score" %}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card bg-info text-white shadow-sm">
+                <div class="card-body text-center">
+                    <h3>{{ pass_rate|floatformat:0 }}%</h3>
+                    <small>{% trans "Pass Rate" %}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter/Sort -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-5">
+                    <input type="text" name="search" class="form-control" placeholder="{% trans "Search quiz titles..." %}" value="{{ request.GET.search }}">
+                </div>
+                <div class="col-md-3">
+                    <select name="status" class="form-select">
+                        <option value="">{% trans "All Results" %}</option>
+                        <option value="passed" {% if request.GET.status == 'passed' %}selected{% endif %}>{% trans "Passed Only" %}</option>
+                        <option value="failed" {% if request.GET.status == 'failed' %}selected{% endif %}>{% trans "Failed Only" %}</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select name="sort" class="form-select">
+                        <option value="-completed_at" {% if request.GET.sort == '-completed_at' %}selected{% endif %}>{% trans "Newest First" %}</option>
+                        <option value="completed_at" {% if request.GET.sort == 'completed_at' %}selected{% endif %}>{% trans "Oldest First" %}</option>
+                        <option value="-score_percentage" {% if request.GET.sort == '-score_percentage' %}selected{% endif %}>{% trans "Highest Score" %}</option>
+                        <option value="score_percentage" {% if request.GET.sort == 'score_percentage' %}selected{% endif %}>{% trans "Lowest Score" %}</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-funnel"></i> {% trans "Filter" %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Attempts List -->
+    {% if attempts %}
+        {% for attempt in attempts %}
+        <div class="card shadow-sm mb-3 {% if attempt.passed %}border-success{% else %}border-danger{% endif %}">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <!-- Quiz Info -->
+                    <div class="col-md-5">
+                        <h5 class="card-title mb-2">
+                            <a href="{% url 'quiz:quiz_detail' attempt.quiz.id %}" class="text-decoration-none">
+                                {{ attempt.quiz.title }}
+                            </a>
+                        </h5>
+                        <div class="mb-2">
+                            <span class="badge bg-{{ attempt.quiz.difficulty|lower }}">
+                                {{ attempt.quiz.get_difficulty_display }}
+                            </span>
+                            {% if attempt.quiz.category %}
+                            <span class="badge bg-secondary">{{ attempt.quiz.category }}</span>
+                            {% endif %}
+                        </div>
+                        <small class="text-muted">
+                            <i class="bi bi-calendar"></i> {{ attempt.completed_at|date:"M d, Y g:i A" }}
+                        </small>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="col-md-4 text-center">
+                        <div class="row">
+                            <div class="col-4">
+                                <h4 class="mb-0 {% if attempt.passed %}text-success{% else %}text-danger{% endif %}">
+                                    {{ attempt.score_percentage|floatformat:1 }}%
+                                </h4>
+                                <small class="text-muted">{% trans "Score" %}</small>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="mb-0">{{ attempt.correct_answers }}/{{ attempt.total_questions }}</h4>
+                                <small class="text-muted">{% trans "Correct" %}</small>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="mb-0">{{ attempt.time_taken_display }}</h4>
+                                <small class="text-muted">{% trans "Time" %}</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status & Actions -->
+                    <div class="col-md-3 text-end">
+                        {% if attempt.passed %}
+                        <div class="mb-2">
+                            <span class="badge bg-success fs-6">
+                                <i class="bi bi-check-circle"></i> {% trans "Passed" %}
+                            </span>
+                        </div>
+                        {% else %}
+                        <div class="mb-2">
+                            <span class="badge bg-danger fs-6">
+                                <i class="bi bi-x-circle"></i> {% trans "Failed" %}
+                            </span>
+                        </div>
+                        {% endif %}
+
+                        <div class="d-flex flex-column gap-2">
+                            <a href="{% url 'quiz:quiz_results' attempt.id %}" class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-eye"></i> {% trans "View Results" %}
+                            </a>
+                            {% if attempt.can_retake %}
+                            <a href="{% url 'quiz:take_quiz' attempt.quiz.id %}" class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-arrow-repeat"></i> {% trans "Retry" %}
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mt-3">
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar {% if attempt.passed %}bg-success{% else %}bg-danger{% endif %}"
+                             role="progressbar"
+                             style="width: {{ attempt.score_percentage }}%;"
+                             aria-valuenow="{{ attempt.score_percentage }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">
+                            {{ attempt.score_percentage|floatformat:1 }}%
+                        </div>
+                    </div>
+                    {% if attempt.quiz.pass_score %}
+                    <small class="text-muted">{% trans "Pass score:" %} {{ attempt.quiz.pass_score }}%</small>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- Pagination -->
+        {% if attempts.has_other_pages %}
+        <nav>
+            <ul class="pagination justify-content-center">
+                {% if attempts.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ attempts.previous_page_number }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}{% if request.GET.status %}&status={{ request.GET.status }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}">{% trans "Previous" %}</a>
+                </li>
+                {% endif %}
+
+                {% for num in attempts.paginator.page_range %}
+                    {% if attempts.number == num %}
+                    <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                    {% elif num > attempts.number|add:'-3' and num < attempts.number|add:'3' %}
+                    <li class="page-item"><a class="page-link" href="?page={{ num }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}{% if request.GET.status %}&status={{ request.GET.status }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}">{{ num }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if attempts.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ attempts.next_page_number }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}{% if request.GET.status %}&status={{ request.GET.status }}{% endif %}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}">{% trans "Next" %}</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+
+    {% else %}
+        <!-- Empty State -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="empty-state">
+                    <i class="bi bi-inbox"></i>
+                    <h4>{% trans "No Quiz Attempts Yet" %}</h4>
+                    <p>{% trans "You haven't taken any quizzes. Browse our collection and start learning!" %}</p>
+                    <a href="{% url 'quiz:quiz_list' %}" class="btn btn-primary btn-lg">
+                        <i class="bi bi-search"></i> {% trans "Browse Quizzes" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

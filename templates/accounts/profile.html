@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "My Profile" %} - QuizCraft{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-person-circle"></i> {% trans "My Profile" %}</h2>
+
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">{% trans "First Name" %}</label>
+                                {{ form.first_name }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{% trans "Last Name" %}</label>
+                                {{ form.last_name }}
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Email" %}</label>
+                            {{ form.email }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Bio" %}</label>
+                            {{ form.bio }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Organization" %}</label>
+                            {{ form.organization }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Website" %}</label>
+                            {{ form.website }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Avatar" %}</label>
+                            {{ form.avatar }}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-save"></i> {% trans "Save Changes" %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

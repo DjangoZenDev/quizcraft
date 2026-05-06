@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Quiz Results" %} - {{ attempt.quiz.title }} - QuizCraft{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <!-- Results Header -->
+            <div class="card shadow-sm mb-4 {% if attempt.passed %}border-success{% else %}border-danger{% endif %}">
+                <div class="card-body text-center py-5">
+                    {% if attempt.passed %}
+                        <i class="bi bi-check-circle text-success" style="font-size: 5rem;"></i>
+                        <h1 class="text-success mt-3">{% trans "Congratulations!" %}</h1>
+                        <p class="lead">{% trans "You passed the quiz!" %}</p>
+                    {% else %}
+                        <i class="bi bi-x-circle text-danger" style="font-size: 5rem;"></i>
+                        <h1 class="text-danger mt-3">{% trans "Not Quite There" %}</h1>
+                        <p class="lead">{% trans "Keep practicing and try again!" %}</p>
+                    {% endif %}
+
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h2 class="mb-0">{{ attempt.score_percentage|floatformat:1 }}%</h2>
+                            <small class="text-muted">{% trans "Your Score" %}</small>
+                        </div>
+                        <div class="col-md-3">
+                            <h2 class="mb-0">{{ attempt.correct_answers }}</h2>
+                            <small class="text-muted">{% trans "Correct" %}</small>
+                        </div>
+                        <div class="col-md-3">
+                            <h2 class="mb-0">{{ attempt.total_questions }}</h2>
+                            <small class="text-muted">{% trans "Total" %}</small>
+                        </div>
+                        <div class="col-md-3">
+                            <h2 class="mb-0">{{ attempt.time_taken_display }}</h2>
+                            <small class="text-muted">{% trans "Time Taken" %}</small>
+                        </div>
+                    </div>
+
+                    {% if attempt.quiz.pass_score %}
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            {% trans "Passing Score:" %} {{ attempt.quiz.pass_score }}%
+                        </small>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Review Answers -->
+            {% if attempt.quiz.allow_review %}
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h4 class="mb-0"><i class="bi bi-list-check"></i> {% trans "Review Your Answers" %}</h4>
+                </div>
+                <div class="card-body">
+                    {% for response in attempt.responses.all %}
+                    <div class="card question-card mb-3 {% if response.is_correct %}correct{% elif response.is_graded %}incorrect{% endif %}">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="mb-0">
+                                    <span class="badge bg-primary me-2">Q{{ forloop.counter }}</span>
+                                    {{ response.question.question_text }}
+                                </h5>
+                                {% if response.is_graded %}
+                                    {% if response.is_correct %}
+                                        <span class="badge bg-success">
+                                            <i class="bi bi-check-circle"></i> {% trans "Correct" %}
+                                            ({{ response.points_earned }}/{{ response.question.points }} {% trans "pts" %})
+                                        </span>
+                                    {% else %}
+                                        <span class="badge bg-danger">
+                                            <i class="bi bi-x-circle"></i> {% trans "Incorrect" %}
+                                            ({{ response.points_earned }}/{{ response.question.points }} {% trans "pts" %})
+                                        </span>
+                                    {% endif %}
+                                {% else %}
+                                    <span class="badge bg-warning text-dark">
+                                        <i class="bi bi-hourglass"></i> {% trans "Pending Review" %}
+                                    </span>
+                                {% endif %}
+                            </div>
+
+                            {% if response.question.image %}
+                            <div class="my-2">
+                                <img src="{{ response.question.image.url }}" alt="{% trans "Question image" %}" class="img-fluid rounded" style="max-height: 200px;">
+                            </div>
+                            {% endif %}
+
+                            <!-- Show User's Answer -->
+                            <div class="alert alert-light mb-2">
+                                <strong>{% trans "Your Answer:" %}</strong>
+                                {% if response.selected_answers.all %}
+                                    <ul class="mb-0 mt-1">
+                                        {% for answer in response.selected_answers.all %}
+                                        <li>{{ answer.answer_text }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% elif response.text_answer %}
+                                    <p class="mb-0 mt-1">{{ response.text_answer }}</p>
+                                {% else %}
+                                    <em class="text-muted">{% trans "No answer provided" %}</em>
+                                {% endif %}
+                            </div>
+
+                            <!-- Show Correct Answer (if enabled) -->
+                            {% if attempt.quiz.show_correct_answers and response.is_graded %}
+                                {% if response.question.question_type == 'MULTIPLE_CHOICE' or response.question.question_type == 'TRUE_FALSE' or response.question.question_type == 'MULTIPLE_SELECT' %}
+                                <div class="alert alert-success mb-0">
+                                    <strong><i class="bi bi-check-circle"></i> {% trans "Correct Answer:" %}</strong>
+                                    <ul class="mb-0 mt-1">
+                                        {% for answer in response.question.answers.all %}
+                                            {% if answer.is_correct %}
+                                            <li>{{ answer.answer_text }}</li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% elif response.question.question_type == 'SHORT_ANSWER' or response.question.question_type == 'FILL_BLANK' %}
+                                <div class="alert alert-success mb-0">
+                                    <strong><i class="bi bi-check-circle"></i> {% trans "Correct Answer:" %}</strong>
+                                    <p class="mb-0 mt-1">{{ response.question.correct_answer_text }}</p>
+                                </div>
+                                {% endif %}
+                            {% endif %}
+
+                            <!-- Explanation (if provided) -->
+                            {% if response.question.explanation and attempt.quiz.show_correct_answers %}
+                            <div class="alert alert-info mb-0 mt-2">
+                                <strong><i class="bi bi-info-circle"></i> {% trans "Explanation:" %}</strong>
+                                <p class="mb-0 mt-1">{{ response.question.explanation }}</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Action Buttons -->
+            <div class="text-center">
+                {% if attempt.can_retake %}
+                <a href="{% url 'quiz:take_quiz' attempt.quiz.id %}" class="btn btn-primary btn-lg">
+                    <i class="bi bi-arrow-repeat"></i> {% trans "Try Again" %}
+                </a>
+                {% endif %}
+                <a href="{% url 'quiz:quiz_detail' attempt.quiz.id %}" class="btn btn-outline-secondary btn-lg">
+                    <i class="bi bi-info-circle"></i> {% trans "Quiz Info" %}
+                </a>
+                <a href="{% url 'quiz:quiz_list' %}" class="btn btn-outline-secondary btn-lg">
+                    <i class="bi bi-search"></i> {% trans "Browse Quizzes" %}
+                </a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'quiz:dashboard' %}" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-speedometer2"></i> {% trans "Dashboard" %}
+                </a>
+                {% endif %}
+            </div>
+
+            <!-- Share Results (Optional) -->
+            <div class="card shadow-sm mt-4">
+                <div class="card-body text-center">
+                    <h5><i class="bi bi-share"></i> {% trans "Share Your Results" %}</h5>
+                    <p class="text-muted mb-3">{% trans "Show off your achievement!" %}</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary" onclick="shareResults()">
+                            <i class="bi bi-link-45deg"></i> {% trans "Copy Link" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function shareResults() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(function() {
+        alert('{% trans "Link copied to clipboard!" %}');
+    }, function() {
+        alert('{% trans "Failed to copy link" %}');
+    });
+}
+</script>
+{% endblock %}

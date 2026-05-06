@@ -1,0 +1,33 @@
+# QuizCraft Requirements
+# Python 3.12+ | Django 5.2+
+
+# Core Framework
+Django==5.2.8
+python-decouple==3.8
+
+# Database
+psycopg2-binary==2.9.10  # PostgreSQL adapter (for production)
+
+# Image handling
+Pillow==12.0.0
+
+# Task Queue (optional for now)
+# celery==5.4.0
+# redis==5.2.1
+
+# Deployment
+gunicorn==23.0.0  # WSGI server for production
+whitenoise==6.8.2  # Static file serving
+
+# Development Tools
+django-debug-toolbar==4.4.6  # Debug toolbar (dev only)
+django-extensions==3.2.3      # Management command extensions
+
+# Testing (optional)
+# pytest==8.3.5
+# pytest-django==4.9.0
+# coverage==7.6.10
+
+# Code Quality (optional)
+# flake8==7.1.1
+# black==24.10.0

@@ -1,0 +1,993 @@
+# QuizCraft Translation File
+# Copyright (C) 2025 QuizCraft
+# Language: de
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: QuizCraft 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: QuizCraft Team\n"
+"Language-Team: de\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Create & Take Quizzes"
+msgstr "Erstelle & Mache Quizze"
+
+msgid "Browse Quizzes"
+msgstr "Quizze Durchsuchen"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "My Quizzes"
+msgstr "Meine Quizze"
+
+msgid "Create Quiz"
+msgstr "Quiz Erstellen"
+
+msgid "Toggle dark mode"
+msgstr "Dunkelmodus umschalten"
+
+msgid "Free"
+msgstr "Kostenlos"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Subscription"
+msgstr "Abonnement"
+
+msgid "My Attempts"
+msgstr "Meine Versuche"
+
+msgid "Admin Panel"
+msgstr "Verwaltungspanel"
+
+msgid "Logout"
+msgstr "Abmelden"
+
+msgid "Login"
+msgstr "Anmelden"
+
+msgid "Sign Up"
+msgstr "Registrieren"
+
+msgid "Create & Take Quizzes Online"
+msgstr "Erstelle & Mache Online Quizze"
+
+msgid "Built with Django & Bootstrap."
+msgstr "Erstellt mit Django & Bootstrap."
+
+msgid "Username"
+msgstr "Benutzername"
+
+msgid "Password"
+msgstr "Passwort"
+
+msgid "Don't have an account?"
+msgstr "Noch kein Konto?"
+
+msgid "Create Account"
+msgstr "Konto Erstellen"
+
+msgid "First Name"
+msgstr "Vorname"
+
+msgid "Last Name"
+msgstr "Nachname"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Minimum 8 characters"
+msgstr "Mindestens 8 Zeichen"
+
+msgid "Confirm Password"
+msgstr "Passwort Bestätigen"
+
+msgid "Already have an account?"
+msgstr "Bereits ein Konto?"
+
+msgid "Create Amazing Quizzes in Minutes"
+msgstr "Erstelle Tolle Quizze in Minuten"
+
+msgid "QuizCraft makes it easy to create, share, and take quizzes online. Perfect for teachers, trainers, and content creators."
+msgstr "QuizCraft macht es einfach, Online-Quizze zu erstellen, zu teilen und zu absolvieren. Perfekt für Lehrer, Trainer und Content-Ersteller."
+
+msgid "Get Started Free"
+msgstr "Kostenlos Starten"
+
+msgid "Quizzes Available"
+msgstr "Verfügbare Quizze"
+
+msgid "Active Users"
+msgstr "Aktive Benutzer"
+
+msgid "Quizzes Completed"
+msgstr "Abgeschlossene Quizze"
+
+msgid "Featured Quizzes"
+msgstr "Empfohlene Quizze"
+
+msgid "questions"
+msgstr "Fragen"
+
+msgid "Unlimited"
+msgstr "Unbegrenzt"
+
+msgid "Take Quiz"
+msgstr "Quiz Starten"
+
+msgid "Recent Quizzes"
+msgstr "Neueste Quizze"
+
+msgid "View Details"
+msgstr "Details Anzeigen"
+
+msgid "View All Quizzes"
+msgstr "Alle Quizze Anzeigen"
+
+msgid "Why Choose QuizCraft?"
+msgstr "Warum QuizCraft?"
+
+msgid "Fast & Easy"
+msgstr "Schnell & Einfach"
+
+msgid "Create quizzes in minutes with our intuitive interface"
+msgstr "Erstelle Quizze in Minuten mit unserer intuitiven Oberfläche"
+
+msgid "Auto-Grading"
+msgstr "Automatische Bewertung"
+
+msgid "Automatic grading saves you time"
+msgstr "Automatische Bewertung spart Ihnen Zeit"
+
+msgid "Analytics"
+msgstr "Analysen"
+
+msgid "Track performance with detailed statistics"
+msgstr "Verfolgen Sie die Leistung mit detaillierten Statistiken"
+
+msgid "Mobile Ready"
+msgstr "Mobilfreundlich"
+
+msgid "Works perfectly on all devices"
+msgstr "Funktioniert perfekt auf allen Geräten"
+
+msgid "Ready to Get Started?"
+msgstr "Bereit zum Starten?"
+
+msgid "Join thousands of educators and learners using QuizCraft"
+msgstr "Schließen Sie sich Tausenden von Lehrern und Lernenden an"
+
+msgid "Create Free Account"
+msgstr "Kostenloses Konto Erstellen"
+
+msgid "Search quizzes..."
+msgstr "Quizze suchen..."
+
+msgid "All Difficulties"
+msgstr "Alle Schwierigkeiten"
+
+msgid "All Categories"
+msgstr "Alle Kategorien"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Qs"
+msgstr "Fr"
+
+msgid "No quizzes found. Try adjusting your search criteria."
+msgstr "Keine Quizze gefunden. Passen Sie Ihre Suchkriterien an."
+
+msgid "Previous"
+msgstr "Zurück"
+
+msgid "Next"
+msgstr "Weiter"
+
+msgid "Page Not Found"
+msgstr "Seite Nicht Gefunden"
+
+msgid "404 - Page Not Found"
+msgstr "404 - Seite Nicht Gefunden"
+
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "Die gesuchte Seite existiert nicht oder wurde verschoben."
+
+msgid "Go Home"
+msgstr "Zur Startseite"
+
+msgid "Access Denied"
+msgstr "Zugriff Verweigert"
+
+msgid "403 - Access Denied"
+msgstr "403 - Zugriff Verweigert"
+
+msgid "You don't have permission to access this page."
+msgstr "Sie haben keine Berechtigung, auf diese Seite zuzugreifen."
+
+msgid "Easy"
+msgstr "Einfach"
+
+msgid "Medium"
+msgstr "Mittel"
+
+msgid "Hard"
+msgstr "Schwer"
+
+msgid "Multiple Choice"
+msgstr "Multiple Choice"
+
+msgid "True/False"
+msgstr "Wahr/Falsch"
+
+msgid "Short Answer"
+msgstr "Kurzantwort"
+
+msgid "Essay"
+msgstr "Aufsatz"
+
+msgid "Multiple Select"
+msgstr "Mehrfachauswahl"
+
+msgid "Fill in the Blank"
+msgstr "Lückentext"
+
+msgid "In Progress"
+msgstr "In Bearbeitung"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Abandoned"
+msgstr "Abgebrochen"
+
+msgid "Timed Out"
+msgstr "Zeit Abgelaufen"
+
+msgid "quiz"
+msgstr "Quiz"
+
+msgid "quizzes"
+msgstr "Quizze"
+
+msgid "question"
+msgstr "Frage"
+
+msgid "answer"
+msgstr "Antwort"
+
+msgid "answers"
+msgstr "Antworten"
+
+msgid "quiz attempt"
+msgstr "Quizversuch"
+
+msgid "quiz attempts"
+msgstr "Quizversuche"
+
+msgid "response"
+msgstr "Antwort"
+
+msgid "responses"
+msgstr "Antworten"
+
+msgid "quiz template"
+msgstr "Quizvorlage"
+
+msgid "quiz templates"
+msgstr "Quizvorlagen"
+
+msgid "Welcome back,"
+msgstr "Willkommen zurück,"
+
+msgid "free quizzes remaining"
+msgstr "kostenlose Quizze verbleibend"
+
+msgid "Quizzes Created"
+msgstr "Quizze Erstellt"
+
+msgid "Quizzes Taken"
+msgstr "Quizze Absolviert"
+
+msgid "Average Score"
+msgstr "Durchschnittliche Punktzahl"
+
+msgid "Responses Received"
+msgstr "Antworten Erhalten"
+
+msgid "Quick Actions"
+msgstr "Schnellaktionen"
+
+msgid "Create Quiz (Limit Reached)"
+msgstr "Quiz Erstellen (Limit Erreicht)"
+
+msgid "Upgrade to Premium!"
+msgstr "Upgrade auf Premium!"
+
+msgid "Create unlimited quizzes and unlock advanced features."
+msgstr "Erstellen Sie unbegrenzte Quizze und schalten Sie erweiterte Funktionen frei."
+
+msgid "View Plans"
+msgstr "Pläne Anzeigen"
+
+msgid "Your Quizzes"
+msgstr "Ihre Quizze"
+
+msgid "View All"
+msgstr "Alle Anzeigen"
+
+msgid "attempts"
+msgstr "Versuche"
+
+msgid "Published"
+msgstr "Veröffentlicht"
+
+msgid "Draft"
+msgstr "Entwurf"
+
+msgid "You haven't created any quizzes yet."
+msgstr "Sie haben noch keine Quizze erstellt."
+
+msgid "Create Your First Quiz"
+msgstr "Erstellen Sie Ihr Erstes Quiz"
+
+msgid "Recent Attempts"
+msgstr "Letzte Versuche"
+
+msgid "Passed"
+msgstr "Bestanden"
+
+msgid "Failed"
+msgstr "Nicht Bestanden"
+
+msgid "You haven't taken any quizzes yet."
+msgstr "Sie haben noch keine Quizze absolviert."
+
+msgid "Your Performance"
+msgstr "Ihre Leistung"
+
+msgid "Pass Rate"
+msgstr "Bestehensrate"
+
+msgid "minutes"
+msgstr "Minuten"
+
+msgid "Questions"
+msgstr "Fragen"
+
+msgid "Attempts"
+msgstr "Versuche"
+
+msgid "Avg Score"
+msgstr "Durchschn."
+
+msgid "Quiz Information"
+msgstr "Quiz-Informationen"
+
+msgid "Created by:"
+msgstr "Erstellt von:"
+
+msgid "Passing Score:"
+msgstr "Bestehensquote:"
+
+msgid "Maximum Attempts:"
+msgstr "Maximale Versuche:"
+
+msgid "Questions:"
+msgstr "Fragen:"
+
+msgid "Shuffled"
+msgstr "Zufällig"
+
+msgid "Fixed Order"
+msgstr "Feste Reihenfolge"
+
+msgid "Correct answers will be shown after submission"
+msgstr "Richtige Antworten werden nach dem Einreichen angezeigt"
+
+msgid "You must"
+msgstr "Sie müssen sich"
+
+msgid "login"
+msgstr "anmelden"
+
+msgid "to take this quiz."
+msgstr "um dieses Quiz zu machen."
+
+msgid "Start Quiz"
+msgstr "Quiz Starten"
+
+msgid "Back to Quizzes"
+msgstr "Zurück zu Quizzen"
+
+msgid "Taking:"
+msgstr "Quiz:"
+
+msgid "Time Remaining"
+msgstr "Verbleibende Zeit"
+
+msgid "pts"
+msgstr "Pkt"
+
+msgid "Question image"
+msgstr "Fragebild"
+
+msgid "Select all that apply"
+msgstr "Alles Zutreffende auswählen"
+
+msgid "Enter your answer"
+msgstr "Geben Sie Ihre Antwort ein"
+
+msgid "Fill in the blank"
+msgstr "Füllen Sie die Lücke aus"
+
+msgid "Write your essay answer here..."
+msgstr "Schreiben Sie hier Ihre Aufsatzantwort..."
+
+msgid "This will be manually graded."
+msgstr "Dies wird manuell bewertet."
+
+msgid "Submit Quiz"
+msgstr "Quiz Absenden"
+
+msgid "Make sure you've answered all questions before submitting."
+msgstr "Stellen Sie sicher, dass Sie alle Fragen beantwortet haben."
+
+msgid "You have created"
+msgstr "Sie haben erstellt"
+
+msgid "remaining on free plan"
+msgstr "verbleibend im kostenlosen Plan"
+
+msgid "Upgrade to Create More"
+msgstr "Upgrade für Mehr"
+
+msgid "Heads up!"
+msgstr "Achtung!"
+
+msgid "You're running low on free quizzes."
+msgstr "Ihre kostenlosen Quizze gehen zur Neige."
+
+msgid "Upgrade now"
+msgstr "Jetzt upgraden"
+
+msgid "for unlimited quizzes."
+msgstr "für unbegrenzte Quizze."
+
+msgid "All Status"
+msgstr "Alle Status"
+
+msgid "Filter"
+msgstr "Filtern"
+
+msgid "Public"
+msgstr "Öffentlich"
+
+msgid "Private"
+msgstr "Privat"
+
+msgid "View"
+msgstr "Ansehen"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Created"
+msgstr "Erstellt"
+
+msgid "No Quizzes Yet"
+msgstr "Noch Keine Quizze"
+
+msgid "You haven't created any quizzes. Start creating your first quiz now!"
+msgstr "Sie haben noch keine Quizze erstellt. Erstellen Sie jetzt Ihr erstes Quiz!"
+
+msgid "You've reached your free quiz limit."
+msgstr "Sie haben Ihr kostenloses Quiz-Limit erreicht."
+
+msgid "Upgrade to Premium"
+msgstr "Auf Premium Upgraden"
+
+msgid "Quiz Results"
+msgstr "Quiz-Ergebnisse"
+
+msgid "Congratulations!"
+msgstr "Herzlichen Glückwunsch!"
+
+msgid "You passed the quiz!"
+msgstr "Sie haben das Quiz bestanden!"
+
+msgid "Not Quite There"
+msgstr "Noch Nicht Ganz"
+
+msgid "Keep practicing and try again!"
+msgstr "Weiter üben und nochmal versuchen!"
+
+msgid "Your Score"
+msgstr "Ihre Punktzahl"
+
+msgid "Correct"
+msgstr "Richtig"
+
+msgid "Total"
+msgstr "Gesamt"
+
+msgid "Time Taken"
+msgstr "Benötigte Zeit"
+
+msgid "Review Your Answers"
+msgstr "Überprüfen Sie Ihre Antworten"
+
+msgid "Incorrect"
+msgstr "Falsch"
+
+msgid "Pending Review"
+msgstr "Überprüfung Ausstehend"
+
+msgid "Your Answer:"
+msgstr "Ihre Antwort:"
+
+msgid "No answer provided"
+msgstr "Keine Antwort gegeben"
+
+msgid "Correct Answer:"
+msgstr "Richtige Antwort:"
+
+msgid "Explanation:"
+msgstr "Erklärung:"
+
+msgid "Try Again"
+msgstr "Erneut Versuchen"
+
+msgid "Quiz Info"
+msgstr "Quiz-Info"
+
+msgid "Share Your Results"
+msgstr "Teilen Sie Ihre Ergebnisse"
+
+msgid "Show off your achievement!"
+msgstr "Zeigen Sie Ihre Leistung!"
+
+msgid "Copy Link"
+msgstr "Link Kopieren"
+
+msgid "Link copied to clipboard!"
+msgstr "Link in Zwischenablage kopiert!"
+
+msgid "Failed to copy link"
+msgstr "Kopieren fehlgeschlagen"
+
+msgid "My Quiz Attempts"
+msgstr "Meine Quizversuche"
+
+msgid "You have completed"
+msgstr "Sie haben abgeschlossen"
+
+msgid "Total Attempts"
+msgstr "Gesamtversuche"
+
+msgid "Search quiz titles..."
+msgstr "Quiztitel suchen..."
+
+msgid "All Results"
+msgstr "Alle Ergebnisse"
+
+msgid "Passed Only"
+msgstr "Nur Bestanden"
+
+msgid "Failed Only"
+msgstr "Nur Nicht Bestanden"
+
+msgid "Newest First"
+msgstr "Neueste Zuerst"
+
+msgid "Oldest First"
+msgstr "Älteste Zuerst"
+
+msgid "Highest Score"
+msgstr "Höchste Punktzahl"
+
+msgid "Lowest Score"
+msgstr "Niedrigste Punktzahl"
+
+msgid "Score"
+msgstr "Punktzahl"
+
+msgid "Time"
+msgstr "Zeit"
+
+msgid "View Results"
+msgstr "Ergebnisse Anzeigen"
+
+msgid "Retry"
+msgstr "Wiederholen"
+
+msgid "Pass score:"
+msgstr "Bestehensquote:"
+
+msgid "No Quiz Attempts Yet"
+msgstr "Noch Keine Quizversuche"
+
+msgid "You haven't taken any quizzes. Browse our collection and start learning!"
+msgstr "Sie haben noch keine Quizze absolviert. Durchsuchen Sie unsere Sammlung und beginnen Sie zu lernen!"
+
+msgid "Delete Quiz"
+msgstr "Quiz Löschen"
+
+msgid "Confirm Delete"
+msgstr "Löschen Bestätigen"
+
+msgid "This action cannot be undone!"
+msgstr "Diese Aktion kann nicht rückgängig gemacht werden!"
+
+msgid "You are about to permanently delete this quiz and all associated data."
+msgstr "Sie sind dabei, dieses Quiz und alle zugehörigen Daten dauerhaft zu löschen."
+
+msgid "Quiz Details:"
+msgstr "Quiz-Details:"
+
+msgid "Title:"
+msgstr "Titel:"
+
+msgid "Total Attempts:"
+msgstr "Gesamtversuche:"
+
+msgid "Responses:"
+msgstr "Antworten:"
+
+msgid "Created:"
+msgstr "Erstellt:"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "What will be deleted:"
+msgstr "Was gelöscht wird:"
+
+msgid "The quiz:"
+msgstr "Das Quiz:"
+
+msgid "All questions and answers"
+msgstr "Alle Fragen und Antworten"
+
+msgid "All user attempts and results"
+msgstr "Alle Benutzerversuche und Ergebnisse"
+
+msgid "All individual responses"
+msgstr "Alle individuellen Antworten"
+
+msgid "All statistics and analytics"
+msgstr "Alle Statistiken und Analysen"
+
+msgid "Type the quiz title to confirm:"
+msgstr "Geben Sie den Quiztitel zur Bestätigung ein:"
+
+msgid "Copy and paste the title exactly as shown above"
+msgstr "Kopieren Sie den Titel genau wie oben angezeigt"
+
+msgid "Yes, Delete This Quiz Permanently"
+msgstr "Ja, Dieses Quiz Dauerhaft Löschen"
+
+msgid "Cancel - Keep This Quiz"
+msgstr "Abbrechen - Quiz Behalten"
+
+msgid "Don't want to delete? Consider these alternatives:"
+msgstr "Nicht löschen? Erwägen Sie diese Alternativen:"
+
+msgid "Edit Quiz"
+msgstr "Quiz Bearbeiten"
+
+msgid "Use Edit to unpublish"
+msgstr "Bearbeiten verwenden zum Zurückziehen"
+
+msgid "Unpublish"
+msgstr "Zurückziehen"
+
+msgid "Unpublishing keeps your quiz but hides it from public view"
+msgstr "Zurückziehen behält Ihr Quiz, verbirgt es aber vor der Öffentlichkeit"
+
+msgid "Are you absolutely sure? This CANNOT be undone!"
+msgstr "Sind Sie absolut sicher? Dies KANN NICHT rückgängig gemacht werden!"
+
+msgid "Create New Quiz"
+msgstr "Neues Quiz Erstellen"
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Quiz Details"
+msgstr "Quiz-Details"
+
+msgid "Add Questions"
+msgstr "Fragen Hinzufügen"
+
+msgid "Publish"
+msgstr "Veröffentlichen"
+
+msgid "After saving, you can add or edit questions."
+msgstr "Nach dem Speichern können Sie Fragen hinzufügen oder bearbeiten."
+
+msgid "Save this form to add questions."
+msgstr "Speichern Sie dieses Formular, um Fragen hinzuzufügen."
+
+msgid "Basic Information"
+msgstr "Grundinformationen"
+
+msgid "Quiz Title"
+msgstr "Quiztitel"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Explain what this quiz is about"
+msgstr "Erklären Sie, worum es in diesem Quiz geht"
+
+msgid "Difficulty"
+msgstr "Schwierigkeit"
+
+msgid "Category"
+msgstr "Kategorie"
+
+msgid "e.g., Math, Science, History"
+msgstr "z.B. Mathematik, Wissenschaft, Geschichte"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "Comma-separated"
+msgstr "Kommagetrennt"
+
+msgid "Quiz Settings"
+msgstr "Quiz-Einstellungen"
+
+msgid "Time Limit (minutes)"
+msgstr "Zeitlimit (Minuten)"
+
+msgid "0 = No time limit"
+msgstr "0 = Kein Zeitlimit"
+
+msgid "Pass Score (%)"
+msgstr "Bestehensquote (%)"
+
+msgid "Minimum to pass"
+msgstr "Minimum zum Bestehen"
+
+msgid "Max Attempts"
+msgstr "Max. Versuche"
+
+msgid "0 = Unlimited"
+msgstr "0 = Unbegrenzt"
+
+msgid "Privacy & Publishing"
+msgstr "Datenschutz & Veröffentlichung"
+
+msgid "Make quiz available to users"
+msgstr "Quiz für Benutzer verfügbar machen"
+
+msgid "Show in quiz list"
+msgstr "In Quizliste anzeigen"
+
+msgid "Require Login"
+msgstr "Anmeldung Erforderlich"
+
+msgid "Only logged-in users can take"
+msgstr "Nur angemeldete Benutzer können teilnehmen"
+
+msgid "Display Options"
+msgstr "Anzeigeoptionen"
+
+msgid "Shuffle Questions"
+msgstr "Fragen Mischen"
+
+msgid "Randomize question order"
+msgstr "Zufällige Fragenreihenfolge"
+
+msgid "Shuffle Answers"
+msgstr "Antworten Mischen"
+
+msgid "Randomize answer choices"
+msgstr "Zufällige Antwortmöglichkeiten"
+
+msgid "Show Correct Answers"
+msgstr "Richtige Antworten Anzeigen"
+
+msgid "After submission"
+msgstr "Nach dem Einreichen"
+
+msgid "Allow Review"
+msgstr "Überprüfung Erlauben"
+
+msgid "Users can review answers"
+msgstr "Benutzer können Antworten überprüfen"
+
+msgid "Instant Results"
+msgstr "Sofortergebnisse"
+
+msgid "Show score right away"
+msgstr "Punktzahl sofort anzeigen"
+
+msgid "Update Quiz"
+msgstr "Quiz Aktualisieren"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "After saving, you can:"
+msgstr "Nach dem Speichern können Sie:"
+
+msgid "Preview Quiz"
+msgstr "Quiz Vorschau"
+
+msgid "Add Question"
+msgstr "Frage Hinzufügen"
+
+msgid "points"
+msgstr "Punkte"
+
+msgid "No questions added yet."
+msgstr "Noch keine Fragen hinzugefügt."
+
+msgid "Add Your First Question"
+msgstr "Fügen Sie Ihre Erste Frage Hinzu"
+
+msgid "Question creation interface will be implemented here. For now, use the Django admin panel to add questions."
+msgstr "Die Fragenerstellungsoberfläche wird hier implementiert. Verwenden Sie vorerst das Django-Admin-Panel."
+
+msgid "Add via Admin Panel"
+msgstr "Über Admin-Panel Hinzufügen"
+
+msgid "My Profile"
+msgstr "Mein Profil"
+
+msgid "Bio"
+msgstr "Biografie"
+
+msgid "Organization"
+msgstr "Organisation"
+
+msgid "Website"
+msgstr "Webseite"
+
+msgid "Avatar"
+msgstr "Avatar"
+
+msgid "Save Changes"
+msgstr "Änderungen Speichern"
+
+msgid "Current Plan:"
+msgstr "Aktueller Plan:"
+
+msgid "Quiz Limit:"
+msgstr "Quiz-Limit:"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Free Tier"
+msgstr "Kostenloser Plan"
+
+msgid "Total Quizzes Created:"
+msgstr "Gesamt Erstellte Quizze:"
+
+msgid "Total Responses:"
+msgstr "Gesamt Antworten:"
+
+msgid "Available Plans"
+msgstr "Verfügbare Pläne"
+
+msgid "month"
+msgstr "Monat"
+
+msgid "5 quizzes"
+msgstr "5 Quizze"
+
+msgid "50 responses/month"
+msgstr "50 Antworten/Monat"
+
+msgid "Basic question types"
+msgstr "Grundlegende Fragetypen"
+
+msgid "Current Plan"
+msgstr "Aktueller Plan"
+
+msgid "Downgrade"
+msgstr "Herunterstufen"
+
+msgid "Teacher"
+msgstr "Lehrer"
+
+msgid "Most Popular"
+msgstr "Am Beliebtesten"
+
+msgid "Unlimited quizzes"
+msgstr "Unbegrenzte Quizze"
+
+msgid "Unlimited responses"
+msgstr "Unbegrenzte Antworten"
+
+msgid "All question types"
+msgstr "Alle Fragetypen"
+
+msgid "Basic analytics"
+msgstr "Grundlegende Analysen"
+
+msgid "Upgrade"
+msgstr "Upgraden"
+
+msgid "Professional"
+msgstr "Professionell"
+
+msgid "Everything in Teacher"
+msgstr "Alles im Lehrer-Plan"
+
+msgid "3 team members"
+msgstr "3 Teammitglieder"
+
+msgid "Advanced analytics"
+msgstr "Erweiterte Analysen"
+
+msgid "Custom branding"
+msgstr "Eigenes Branding"
+
+msgid "School"
+msgstr "Schule"
+
+msgid "Everything in Pro"
+msgstr "Alles im Pro-Plan"
+
+msgid "10+ team members"
+msgstr "10+ Teammitglieder"
+
+msgid "SSO integration"
+msgstr "SSO-Integration"
+
+msgid "Priority support"
+msgstr "Prioritäts-Support"
+
+msgid "Contact Sales"
+msgstr "Vertrieb Kontaktieren"
+
+msgid "Cancel Subscription"
+msgstr "Abonnement Kündigen"
+
+msgid "Are you sure you want to cancel your subscription?"
+msgstr "Sind Sie sicher, dass Sie Ihr Abonnement kündigen möchten?"
+
+msgid "Reset Password"
+msgstr "Passwort Zurücksetzen"
+
+msgid "Enter your email address and we'll send you a link to reset your password."
+msgstr "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts."
+
+msgid "Send Reset Link"
+msgstr "Reset-Link Senden"
+
+msgid "Back to Login"
+msgstr "Zurück zum Anmelden"
+
+msgid "Set New Password"
+msgstr "Neues Passwort Festlegen"
+
+msgid "New Password"
+msgstr "Neues Passwort"
+
+msgid "Invalid Link"
+msgstr "Ungültiger Link"
+
+msgid "This password reset link is invalid or has expired."
+msgstr "Dieser Passwort-Reset-Link ist ungültig oder abgelaufen."
+
+msgid "Request New Link"
+msgstr "Neuen Link Anfordern"
+
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+

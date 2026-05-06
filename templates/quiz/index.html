@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static i18n %}
+
+{% block title %}QuizCraft - {% trans "Create & Take Quizzes Online" %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-3">{% trans "Create Amazing Quizzes in Minutes" %}</h1>
+                <p class="lead mb-4">
+                    {% trans "QuizCraft makes it easy to create, share, and take quizzes online. Perfect for teachers, trainers, and content creators." %}
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'quiz:quiz_list' %}" class="btn btn-light btn-lg">
+                        <i class="bi bi-search"></i> {% trans "Browse Quizzes" %}
+                    </a>
+                    {% if not user.is_authenticated %}
+                    <a href="{% url 'accounts:register' %}" class="btn btn-success btn-lg">
+                        <i class="bi bi-person-plus"></i> {% trans "Get Started Free" %}
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <i class="bi bi-trophy-fill" style="font-size: 200px; opacity: 0.2;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="container my-5">
+    <div class="row text-center g-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body py-4">
+                    <i class="bi bi-journal-text text-primary" style="font-size: 3rem;"></i>
+                    <h3 class="mt-3 mb-2">{{ stats.total_quizzes }}</h3>
+                    <p class="text-muted mb-0">{% trans "Quizzes Available" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body py-4">
+                    <i class="bi bi-people-fill text-success" style="font-size: 3rem;"></i>
+                    <h3 class="mt-3 mb-2">{{ stats.total_users }}</h3>
+                    <p class="text-muted mb-0">{% trans "Active Users" %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body py-4">
+                    <i class="bi bi-check-circle-fill text-info" style="font-size: 3rem;"></i>
+                    <h3 class="mt-3 mb-2">{{ stats.total_attempts }}</h3>
+                    <p class="text-muted mb-0">{% trans "Quizzes Completed" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Quizzes -->
+{% if featured_quizzes %}
+<div class="container my-5">
+    <h2 class="mb-4"><i class="bi bi-star-fill text-warning"></i> {% trans "Featured Quizzes" %}</h2>
+    <div class="row g-4">
+        {% for quiz in featured_quizzes %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title">{{ quiz.title }}</h5>
+                        <span class="badge bg-{{ quiz.difficulty|lower }}">
+                            {{ quiz.get_difficulty_display }}
+                        </span>
+                    </div>
+                    <p class="card-text text-muted small">{{ quiz.description|truncatewords:20 }}</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <small class="text-muted">
+                            <i class="bi bi-question-circle"></i> {{ quiz.total_questions }} {% trans "questions" %}
+                        </small>
+                        <small class="text-muted">
+                            <i class="bi bi-clock"></i>
+                            {% if quiz.time_limit > 0 %}
+                            {{ quiz.time_limit }} min
+                            {% else %}
+                            {% trans "Unlimited" %}
+                            {% endif %}
+                        </small>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'quiz:quiz_detail' quiz.id %}" class="btn btn-primary btn-sm w-100">
+                        <i class="bi bi-play-circle"></i> {% trans "Take Quiz" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Recent Quizzes -->
+{% if recent_quizzes %}
+<div class="container my-5">
+    <h2 class="mb-4"><i class="bi bi-clock-history"></i> {% trans "Recent Quizzes" %}</h2>
+    <div class="row g-4">
+        {% for quiz in recent_quizzes %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title">{{ quiz.title }}</h5>
+                        {% if quiz.category %}
+                        <span class="badge bg-secondary">{{ quiz.category }}</span>
+                        {% endif %}
+                    </div>
+                    <p class="card-text text-muted small">{{ quiz.description|truncatewords:15 }}</p>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            <i class="bi bi-person"></i> {{ quiz.creator.username }}
+                        </small>
+                        <br>
+                        <small class="text-muted">
+                            <i class="bi bi-calendar"></i> {{ quiz.created_at|date:"M d, Y" }}
+                        </small>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'quiz:quiz_detail' quiz.id %}" class="btn btn-outline-primary btn-sm w-100">
+                        {% trans "View Details" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+        <a href="{% url 'quiz:quiz_list' %}" class="btn btn-primary">
+            <i class="bi bi-arrow-right-circle"></i> {% trans "View All Quizzes" %}
+        </a>
+    </div>
+</div>
+{% endif %}
+
+<!-- Features Section -->
+<div class="bg-light py-5 my-5">
+    <div class="container">
+        <h2 class="text-center mb-5">{% trans "Why Choose QuizCraft?" %}</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <i class="bi bi-lightning-charge-fill text-primary" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">{% trans "Fast & Easy" %}</h5>
+                    <p class="text-muted small">{% trans "Create quizzes in minutes with our intuitive interface" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <i class="bi bi-check2-all text-success" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">{% trans "Auto-Grading" %}</h5>
+                    <p class="text-muted small">{% trans "Automatic grading saves you time" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <i class="bi bi-graph-up text-info" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">{% trans "Analytics" %}</h5>
+                    <p class="text-muted small">{% trans "Track performance with detailed statistics" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <i class="bi bi-phone text-warning" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">{% trans "Mobile Ready" %}</h5>
+                    <p class="text-muted small">{% trans "Works perfectly on all devices" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+{% if not user.is_authenticated %}
+<div class="container my-5">
+    <div class="card bg-primary text-white">
+        <div class="card-body text-center py-5">
+            <h2 class="mb-3">{% trans "Ready to Get Started?" %}</h2>
+            <p class="lead mb-4">{% trans "Join thousands of educators and learners using QuizCraft" %}</p>
+            <a href="{% url 'accounts:register' %}" class="btn btn-light btn-lg">
+                <i class="bi bi-person-plus"></i> {% trans "Create Free Account" %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

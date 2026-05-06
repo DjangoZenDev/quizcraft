@@ -1,0 +1,311 @@
+/**
+ * Custom Styles for QuizCraft
+ */
+
+:root {
+    --primary: #0d6efd;
+    --success: #198754;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #0dcaf0;
+}
+
+/* Layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Difficulty Badges */
+.badge.bg-easy {
+    background-color: var(--success) !important;
+}
+
+.badge.bg-medium {
+    background-color: var(--warning) !important;
+    color: #000 !important;
+}
+
+.badge.bg-hard {
+    background-color: var(--danger) !important;
+}
+
+/* Card Hover Effects */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Quiz Timer */
+.quiz-timer {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Question Cards */
+.question-card {
+    border-left: 4px solid var(--primary);
+}
+
+.question-card.correct {
+    border-left-color: var(--success);
+    background-color: #d1e7dd;
+}
+
+.question-card.incorrect {
+    border-left-color: var(--danger);
+    background-color: #f8d7da;
+}
+
+/* Form Styling */
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Stats Cards */
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.stat-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quiz-timer {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Alerts */
+.alert {
+    border-left: 4px solid;
+}
+
+.alert-success {
+    border-left-color: var(--success);
+}
+
+.alert-danger {
+    border-left-color: var(--danger);
+}
+
+.alert-warning {
+    border-left-color: var(--warning);
+}
+
+.alert-info {
+    border-left-color: var(--info);
+}
+
+/* Pagination */
+.pagination .page-link {
+    color: var(--primary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Badge Variations */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Hero Section */
+.bg-primary {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+}
+
+/* Card Borders */
+.border-success {
+    border-color: var(--success) !important;
+    border-width: 2px !important;
+}
+
+.border-danger {
+    border-color: var(--danger) !important;
+    border-width: 2px !important;
+}
+
+/* Quiz Form */
+#quizForm .card {
+    margin-bottom: 1.5rem;
+}
+
+#quizForm .form-check {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+}
+
+#quizForm .form-check:hover {
+    background-color: #f8f9fa;
+}
+
+#quizForm .form-check-input {
+    margin-top: 0.5rem;
+}
+
+/* Profile Avatar */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Dark Mode Overrides */
+[data-bs-theme="dark"] .navbar {
+    background: linear-gradient(135deg, #1a3a6b 0%, #0d2240 100%) !important;
+}
+
+[data-bs-theme="dark"] .question-card.correct {
+    background-color: #0f3d2a;
+}
+
+[data-bs-theme="dark"] .question-card.incorrect {
+    background-color: #3d1520;
+}
+
+[data-bs-theme="dark"] #quizForm .form-check:hover {
+    background-color: #2c3034;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-track {
+    background: #1a1d20;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #495057;
+}
+
+[data-bs-theme="dark"] .stat-card {
+    opacity: 0.95;
+}
+
+[data-bs-theme="dark"] .bg-light {
+    background-color: #212529 !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: #adb5bd !important;
+}
+
+/* Dark mode toggle button */
+#darkModeToggle {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
