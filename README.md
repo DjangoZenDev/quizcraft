@@ -1,6 +1,6 @@
 # QuizCraft — Free Edition
 
-**A SaaS quiz-taking platform for educators, trainers, and content creators.**
+**A SaaS quiz-taking platform for education, training, and content creators.**
 
 Built with Django and Bootstrap.
 
