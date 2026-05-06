@@ -4,6 +4,8 @@
 
 Built with Django and Bootstrap.
 
+![QuizCraft homepage](docs/quizcraft-homepage.png)
+
 > This is the **Free Edition** — focused on quiz taking only.
 > Quiz creation, advanced billing, and commercial usage rights are exclusive to **QuizCraft Pro**.
 
